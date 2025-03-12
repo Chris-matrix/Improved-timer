@@ -1,0 +1,96 @@
+/* C:\Users\cmaxx\Improved-timer\Improved-timer\my-react-app\src\App.css */
+.timer-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.timer-display {
+  font-size: 5rem;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 28rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.dark .modal {
+  background-color: #18181b;
+}
+
+/* Animation for completing a timer */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.timer-complete {
+  animation: pulse 1s ease-in-out;
+}
+
+/* Progress bar styles */
+.progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.dark .progress-bar {
+  background-color: #3f3f46;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  transition: width 1s linear;
+}
+
+.progress-bar-fill.focus {
+  background-color: #3b82f6;
+}
+
+.progress-bar-fill.break {
+  background-color: #10b981;
+}
+
+/* Card styles */
+.card {
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dark .card {
+  background-color: #27272a;
+}
